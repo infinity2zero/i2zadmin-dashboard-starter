@@ -1,0 +1,66 @@
+<div class="sidebar" [ngClass]="{ 'expanded': isExpanded }">
+    <!-- <div class="header">
+      <h1 class="title">
+        deskbird
+      </h1>
+      <div class="toggle" (click)="handleSidebarToggle()">
+        <span class="chevron"></span>
+      </div>
+    </div> -->
+    <div class="content">
+      <div class="link">
+        <div class="content" [routerLink]="['/home']" [routerLinkActive]="'active'">
+          <div class="icon">
+            <i class="bi bi-house"></i>
+          </div>
+          <div class="title">Home</div>
+        </div>
+      </div>
+      <div class="link with-children">
+        <div class="content" [routerLink]="['/pages']" [routerLinkActive]="'active'">
+          <div class="icon">
+            <i class="bi bi-file"></i>
+          </div>
+          <div class="title">Pages</div>
+        </div>
+        <div class="children">
+          <div class="link">
+            <div class="content" [routerLink]="['/pages']" [queryParams]="{ 'page': '1' }"
+              [routerLinkActive]="'active'">
+              <div class="icon">
+                <i class="bi bi-dot"></i>
+              </div>
+              <div class="title">Page 1</div>
+            </div>
+          </div>
+          <div class="link">
+            <div class="content" [routerLink]="['/pages']" [queryParams]="{ 'page': '2' }"
+              [routerLinkActive]="'active'">
+              <div class="icon">
+                <i class="bi bi-dot"></i>
+              </div>
+              <div class="title">Page 2</div>
+            </div>
+          </div>
+          <div class="link">
+            <div class="content" [routerLink]="['/pages']" [queryParams]="{ 'page': '3' }"
+              [routerLinkActive]="'active'">
+              <div class="icon">
+                <i class="bi bi-dot"></i>
+              </div>
+              <div class="title">Page 3</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="link">
+        <div class="content" [routerLink]="['/settings']" [routerLinkActive]="'active'">
+          <div class="icon">
+            <i class="bi bi-gear"></i>
+          </div>
+          <div class="title">Settings</div>
+        </div>
+      </div>
+    </div>
+    <div class="footer"></div>
+  </div>
