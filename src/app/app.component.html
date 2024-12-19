@@ -1,31 +1,19 @@
-<i2z-sidebar [isExpanded]="sidebarExpanded" (toggleSidebar)="sidebarExpanded = !sidebarExpanded"></i2z-sidebar>
+<div class="main-wrapper" [ngClass]="{ 'main-wrapper--navigation-open': mainNavigationOpened }">
+  <nav class="main-navigation">
+    <i2z-sidenav-menu
+      [menu]="menu"
+      [mode]="currentSidebarMode"
+      toggleIconClasses="bi bi-caret-right"
+      iconClasses="bi bi-circle child-icon-size"
+    >
+    </i2z-sidenav-menu>
+  </nav>
+  <i2z-topnav (toggleSideNavMode)="currentSidebarMode=$event">
 
-
-
-<header _ngcontent-ng-c2430233317="" class="page-top-bar">
-  <div _ngcontent-ng-c2430233317="" class="navbar-header">
-    <div _ngcontent-ng-c2430233317="" class="d-flex">
-      <button (click)="sidebarExpanded = !sidebarExpanded" type="button" class="btn btn-sm px-3 mx-2 font-size-16 header-item vertical-menu-btn">
-        <i class="bi bi-list-columns"></i>
-      </button>
-      <div _ngcontent-ng-c2430233317="" class="navbar-brand-box">
-        <a href="http://" target="_blank" rel="noopener noreferrer">
-          <img src="infinity-admin-high-resolution-logo-transparent.png" alt="" srcset="" height="60px">
-        </a>
-      </div>
-      
-    </div>
-    <div class="d-flex">
-      
-    </div>
-  </div>
-</header>
-
-
-
-
-
-
-<div class="content" [ngClass]="{ 'sidebarExpanded': sidebarExpanded }">
-  <router-outlet></router-outlet>
+  </i2z-topnav>
+  
+  <main class="main-content">
+    <router-outlet></router-outlet>
+  </main>
 </div>
+

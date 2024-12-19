@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "i2zadmin-dashboard-starter": {
+    "i2zadmin-dashboard-starter-v2": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -24,11 +24,12 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/i2zadmin-dashboard-starter",
+            "outputPath": "dist/i2zadmin-dashboard-starter-v2",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
-              "zone.js"
+              "zone.js",
+              "@angular/localize/init"
             ],
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
@@ -71,10 +72,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "i2zadmin-dashboard-starter:build:production"
+              "buildTarget": "i2zadmin-dashboard-starter-v2:build:production"
             },
             "development": {
-              "buildTarget": "i2zadmin-dashboard-starter:build:development"
+              "buildTarget": "i2zadmin-dashboard-starter-v2:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -87,7 +88,8 @@
           "options": {
             "polyfills": [
               "zone.js",
-              "zone.js/testing"
+              "zone.js/testing",
+              "@angular/localize/init"
             ],
             "tsConfig": "tsconfig.spec.json",
             "inlineStyleLanguage": "scss",

@@ -1,14 +1,7 @@
-<div class="sidebar" [ngClass]="{ 'expanded': isExpanded }">
-    <!-- <div class="header">
-      <h1 class="title">
-        deskbird
-      </h1>
-      <div class="toggle" (click)="handleSidebarToggle()">
-        <span class="chevron"></span>
-      </div>
-    </div> -->
+<div class="sidebar" [ngClass]="!isExpanded?'collapsed-sidenave':'expanded'">
+    
     <div class="content">
-      <div class="link">
+      <div class="link mt-3" >
         <div class="content" [routerLink]="['/home']" [routerLinkActive]="'active'">
           <div class="icon">
             <i class="bi bi-house"></i>
