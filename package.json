@@ -1,11 +1,15 @@
 {
-  "name": "i2zadmin-dashboard-starter-v2",
+  "name": "i2zadmin-dashboard-starter",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
+    "build:R":"npm run build:P && npm run copy:R && npm run delunwanted",
+    "build:P":"ng build --output-path docs --base-href https://infinity2zero.github.io/i2zadmin-dashboard-starter/",
+    "copy:R":"cp -r  docs/browser demo",
+    "delunwanted":"rm -r docs",
     "test": "ng test"
   },
   "private": true,

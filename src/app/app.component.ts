@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'i2zadmin-dashboard-starter-v2';
+  title = 'i2zadmin-dashboard-starter';
   sidebarExpanded = true;
   currentSidebarMode: any ='mini';
   mainNavigationOpened = true;
