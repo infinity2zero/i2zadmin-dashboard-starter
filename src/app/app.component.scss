@@ -1,39 +1,109 @@
-.content {
-    margin-left: 100px;
-    margin-top: 4rem;
-    transition: 0.3s;
-    &.sidebarExpanded {
-      margin-left: 160px;
+@import '../theme//variables';
+
+// .content {
+//     margin-left: 100px;
+//     margin-top: 4rem;
+//     transition: 0.3s;
+//     &.sidebarExpanded {
+//       margin-left: 160px;
+//     }
+// }
+
+
+
+.main-wrapper {
+    display: grid;
+    grid-template-areas:
+      'nav header'
+      'nav content';
+    grid-template-columns: 0 auto;
+    grid-template-rows: 50px auto;
+    height: 100vh;
+  
+    &.main-wrapper--navigation-open {
+      grid-template-columns: auto 1fr;
     }
-}
-
-
-.page-top-bar {
+  }
+  
+  .main-header {
+    grid-area: header;
+    border-bottom: 1px solid #dfdfdf;
+    display: flex;
+  
+    .sidebar-toggle {
+      width: 50px;
+      height: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-right: 1px solid #dfdfdf;
+      cursor: pointer;
+    }
+  
+    ::ng-deep .mat-form-field-wrapper {
+      padding: 0;
+      border-right: 1px solid #dfdfdf;
+  
+      .mat-form-field-flex {
+        background: none;
+      }
+      .mat-form-field-underline {
+        display: none;
+      }
+      .mat-form-field-suffix {
+        top: -0.6em !important;
+        color: #777;
+        font-size: 12px;
+      }
+      .mat-select-arrow {
+        visibility: hidden;
+      }
+    }
+  }
+  
+  .main-content {
+    grid-area: content;
+    padding: 2rem;
+  }
+  
+  ::ng-deep .main-navigation {
+    .i2z-sidenav--mode-expandable:not(:hover) .input-search,
+    .i2z-sidenav--mode-mini .input-search {
+      display: none !important;
+    }
+  }
+  
+  .main-navigation {
     position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 1002;
-    background-color: white;
-   // box-shadow: 0 2px 3px #032d460f;
-
-    box-shadow: 0px 2px 3px lightgrey;
-    .navbar-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin: 0 auto;
-        height: 70px;
-        padding: 0 10px 0 0;
-        .navbar-brand-box{
-            padding: 0 1.5rem;
-            width: 255px;
-           // position: fixed;
-            z-index: 1;
-            background-color: white;
-           // box-shadow: 0 2px 3px #032d460f;
-        }
+    height: 100vh;
+    top: 4.5rem;
+    grid-area: nav;
+    background: $white;
+    box-shadow: 3px 0px 3px lightgrey;
+    .input-search {
+      display: flex;
+      margin: 10px;
+      background-color: $white;
+      align-items: center;
+      border-radius: 2px;
+      color: #666;
+  
+      &.input-search--focus {
+        background: #fff;
+      }
+  
+      input {
+        padding: 10px;
+      }
+  
+      i,
+      input::placeholder {
+        color: #999;
+      }
+  
+      i {
+        margin: 0 10px;
+      }
     }
-
-}
+  }
   

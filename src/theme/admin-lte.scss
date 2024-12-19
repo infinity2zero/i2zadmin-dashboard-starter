@@ -1,0 +1,144 @@
+
+@import './variables';
+
+.i2z-sidenav-anchor {
+  display: block;
+  border-left: 3px solid transparent;
+
+  &.i2z-sidenav-anchor--active {
+    border-left-color: $orange !important;
+    background: $orange;
+    a{
+      color: $white;
+    }
+  }
+  a {
+    color: $gray-800;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 12px 5px 12px 15px;
+    &:hover {
+      background: $orange;
+      color: $white;
+    }
+  }
+}
+
+.i2z-sidenav-node ul .i2z-sidenav-anchor {
+  border-left: none;
+
+  a {
+    padding: 5px 15px;
+    color: $gray-800;
+    background: none;
+  }
+
+  &:hover a,
+  &.i2z-sidenav-anchor--active a {
+    background: none;
+    color:  $black !important;
+  }
+}
+
+.i2z-sidenav-item--disabled {
+  opacity: 0.5;
+
+  .i2z-sidenav-anchor a[href]:hover,
+  .i2z-sidenav-anchor a[routerLink]:hover {
+    cursor: not-allowed;
+  }
+  .i2z-sidenav-anchor a:hover {
+    background: inherit;
+    color: $orange !important;
+  }
+  .i2z-sidenav-node .i2z-sidenav-node .i2z-sidenav-anchor a {
+    color: inherit !important;
+  }
+}
+
+.i2z-sidenav-node ul {
+  background: $white;
+  padding-left: 5px !important;
+
+  .i2z-sidenav-node ul {
+    padding-left: 20px !important;
+  }
+}
+
+.i2z-sidenav-item__header {
+  padding: 10px 25px 10px 15px !important;
+  color: $white;
+  background: $primary;
+  font-size: 12px;
+  text-transform: uppercase;
+  line-height: 12px;
+
+  .i2z-sidenav-item__header {
+    margin-left: -5px;
+    padding: 6px 12px 6px 20px !important;
+  }
+}
+
+.i2z-badges__badge {
+  padding: 0.2em 0.6em;
+  font-size: 75%;
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+  border-radius: 0.25em;
+
+  &.badge--green {
+    background-color: #00a65a;
+  }
+  &.badge--red {
+    background-color: #dd4b39;
+  }
+  &.badge--yellow {
+    background-color: #f39c12;
+  }
+  &.badge--blue {
+    background-color: #3c8dbc;
+  }
+}
+
+.i2z-sidenav--mode-mini {
+  .i2z-sidenav-node__label,
+  > ul > .i2z-sidenav-item > .i2z-sidenav-anchor .i2z-sidenav-anchor__label {
+    font-weight: 400;
+  }
+
+  > ul > .i2z-sidenav-item:hover > .i2z-sidenav-node > ul,
+  > ul > .i2z-sidenav-item:hover > .i2z-sidenav-anchor .i2z-sidenav-anchor__label {
+    border-radius: 0 4px 4px 0;
+  }
+
+  .i2z-sidenav-node__label,
+  > ul > .i2z-sidenav-item:hover > .i2z-sidenav-anchor .i2z-sidenav-anchor__label {
+    line-height: 20px;
+    padding: 12px 15px;
+    color: $gray-800;
+    display: block;
+    background: $orange;
+    color: $white;
+    margin-left: -5px;
+    
+  }
+}
+
+.rotateB4Icon{
+  &::before {
+    transform: rotate(var(--degree));
+    transition: ease-in .2s;
+  }
+}
+.child-icon-size{
+  font-size: .6rem !important;
+}
+
+
+  
+
+
+
+
+

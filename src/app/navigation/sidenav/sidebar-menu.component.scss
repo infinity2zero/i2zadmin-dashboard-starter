@@ -1,0 +1,122 @@
+:host {
+  display: block;
+  overflow: hidden;
+
+  &:hover {
+   overflow: visible;
+  }
+}
+
+:host ::ng-deep {
+  ul,
+  .i2z-sidenav-item {
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    line-height: 0;
+  }
+
+  .i2z-sidenav-item__header,
+  .i2z-sidenav-anchor__label,
+  .i2z-sidenav-node__label {
+    white-space: nowrap;
+  }
+
+  .i2z-sidenav-node__label {
+    display: none;
+  }
+
+  .i2z-sidenav-node:not(.i2z-sidenav-node--open) > .ng-trigger-openClose,
+  .i2z-sidenav-node > .ng-trigger-openClose.ng-animating {
+    overflow: hidden;
+  }
+
+  .i2z-sidenav-item--filtered {
+    display: none;
+  }
+
+  .i2z-sidenav,
+  .i2z-sidenav-node ul {
+    list-style: none;
+  }
+
+  .i2z-sidenav-anchor a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    user-select: none;
+  }
+
+  .i2z-sidenav-item__header {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: block;
+  }
+
+  .i2z-sidenav-node .i2z-sidenav-item__header {
+    margin-left: -6px;
+  }
+
+  .i2z-sidenav-anchor__icon {
+    // width: 20px;
+    width: 2rem;
+    font-size: 1.1rem;
+  }
+
+  .i2z-sidenav-anchor__pull.i2z-toggle,
+  .i2z-sidenav-anchor__pull.i2z-badges {
+    position: absolute;
+    right: 10px;
+
+    .i2z-toggle__icon,
+    .i2z-badges__badge {
+      float: right;
+      text-align: center;
+      white-space: nowrap;
+      margin-left: 4px;
+    }
+
+    .i2z-toggle__icon {
+      margin: 0 4px 0 8px;
+    }
+  }
+
+  .i2z-sidenav--mode-mini,
+  .i2z-sidenav--mode-expandable:not(:hover) {
+    width: 50px;
+
+    > ul > .i2z-sidenav-item > .i2z-sidenav-item__header,
+    > ul > .i2z-sidenav-item > .i2z-sidenav-node > ul,
+    > ul > .i2z-sidenav-item > .i2z-sidenav-node > .i2z-sidenav-anchor .i2z-sidenav-anchor__label,
+    > ul > .i2z-sidenav-item > .i2z-sidenav-node > .i2z-sidenav-anchor .i2z-sidenav-anchor__pull,
+    > ul > .i2z-sidenav-item > .i2z-sidenav-anchor .i2z-sidenav-anchor__label,
+    > ul > .i2z-sidenav-item > .i2z-sidenav-anchor .i2z-sidenav-anchor__pull {
+      display: none;
+    }
+  }
+
+  .i2z-sidenav--mode-mini {
+    .i2z-sidenav-node__label {
+      display: block;
+    }
+
+    > ul > .i2z-sidenav-item {
+      position: relative;
+    }
+
+    > ul > .i2z-sidenav-item:hover > .i2z-sidenav-anchor .i2z-sidenav-anchor__label,
+    > ul > .i2z-sidenav-item:hover > .i2z-sidenav-node > ul {
+      display: block !important;
+      position: absolute;
+      top: 0;
+      left: 100%;
+      height: auto !important;
+      z-index: 999;
+    }
+  }
+}
