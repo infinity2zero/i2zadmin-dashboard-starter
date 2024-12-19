@@ -1,5 +1,5 @@
 {
-  "name": "i2zadmin-dashboard-starter-v2",
+  "name": "i2zadmin-dashboard-starter",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",

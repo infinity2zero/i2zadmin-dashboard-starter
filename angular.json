@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "i2zadmin-dashboard-starter-v2": {
+    "i2zadmin-dashboard-starter": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -24,7 +24,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/i2zadmin-dashboard-starter-v2",
+            "outputPath": "dist/i2zadmin-dashboard-starter",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -72,10 +72,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "i2zadmin-dashboard-starter-v2:build:production"
+              "buildTarget": "i2zadmin-dashboard-starter:build:production"
             },
             "development": {
-              "buildTarget": "i2zadmin-dashboard-starter-v2:build:development"
+              "buildTarget": "i2zadmin-dashboard-starter:build:development"
             }
           },
           "defaultConfiguration": "development"
